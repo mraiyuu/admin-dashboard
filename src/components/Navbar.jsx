@@ -47,18 +47,21 @@ const Navbar = () => {
         />
         <NavButton
           title="Chat"
-          dotColor={'#03C9D7'}
+          dotColor={"#03C9D7"}
           customFunc={() => {}}
           color={"blue"}
           icon={<BsChatLeft />}
         />
         <NavButton
           title="Notification"
-          dotColor={'#03C9D7'}
+          dotColor={"#03C9D7"}
           customFunc={() => {}}
           color={"blue"}
           icon={<RiNotification3Line />}
         />
+        <TooltipComponent content="Profile" position="BottomCenter">
+          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-full" onClick={() => {}}></div>
+        </TooltipComponent>
       </div>
     </div>
   );
