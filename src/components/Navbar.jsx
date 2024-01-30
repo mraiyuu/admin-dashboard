@@ -60,7 +60,14 @@ const Navbar = () => {
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content="Profile" position="BottomCenter">
-          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-full" onClick={() => {}}></div>
+          <div className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-full" onClick={() => {}}>
+            <img src={avatar} className="w-8 h-8 rounded-full" />
+            <p>
+              <span className="text-14 text-gray-400">Hi, </span> { ' ' }
+              <span className="text-gray-400 text-14 ml-1 font-bold">Denis</span>
+            </p>
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
+          </div>
         </TooltipComponent>
       </div>
     </div>
