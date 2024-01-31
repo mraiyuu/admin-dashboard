@@ -21,9 +21,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       <span
         style={{ background: dotColor }}
         className="absolute inline-flex rounded-full h-2 w-2 top-2 right-2"
-      >
-        {icon}
-      </span>
+      />
+      {icon}
     </button>
   </TooltipComponent>
 );
@@ -38,8 +37,8 @@ const Navbar = () => {
     screenSize,
     setScreenSize,
   } = useStateContext();
-  
-// context screen size
+
+  // context screen size
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
     window.addEventListener("resize", handleResize);
