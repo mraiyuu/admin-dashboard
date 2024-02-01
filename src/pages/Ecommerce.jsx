@@ -27,9 +27,13 @@ const Ecommerce = () => {
         <div className="flex flex-wrap m-3 justify-center items-center gap-1">
           {earningData.map((item) => (
             <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl">
-              <button type="button" style={{ color: item.iconColor, backgroundColor: item.iconBg}}>
+              <button type="button" style={{ color: item.iconColor, backgroundColor: item.iconBg}}className="rounded-full text-2xl opacity-0.9 p-4 hover:drop-shadow-xl">
                 {item.icon}
               </button>
+              <p className="mt-3">
+                <span className="font-semibold text-lg">{item.amount}</span>
+                <span className={`text-sm text-${item.pcColor} ml-3`}>{item.percentage}</span>
+              </p>
             </div>
           ))}
         </div>
