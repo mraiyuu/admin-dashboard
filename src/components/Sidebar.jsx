@@ -15,6 +15,7 @@ const Sidebar = () => {
     if(activeMenu && screenSize <=900)
     setActiveMenu(false);
   }
+ //active menue for state management in md and sm screens
  
 
   const activeLink = "flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2";
