@@ -53,6 +53,7 @@ const Ecommerce = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-10">
+        //second section div
         <div className="bg-white dark:bg-secondary-dark-bg dark:text-gray-200 rounded-2xl m-3 p-4 md:w-780">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
