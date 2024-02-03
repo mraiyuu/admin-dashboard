@@ -41,7 +41,7 @@ const Ecommerce = () => {
                 {item.icon}
               </button>
               <p className="mt-3">
-                //color percentage bug 
+                {/* color percentage bug  */}
                 <span className="font-semibold text-lg">{item.amount}</span>
                 <span className={`text-sm text-${item.pcColor} ml-3`}>
                   {item.percentage}
@@ -53,7 +53,7 @@ const Ecommerce = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-10">
-        //second section div
+        {/* second section div */}
         <div className="bg-white dark:bg-secondary-dark-bg dark:text-gray-200 rounded-2xl m-3 p-4 md:w-780">
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
