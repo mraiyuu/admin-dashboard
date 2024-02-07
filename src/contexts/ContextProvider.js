@@ -1,3 +1,4 @@
+import { colorCollections } from "@syncfusion/ej2/treemap";
 import React, { createContext, useContext, useState } from "react";
 
 const StateContext = createContext();
@@ -20,13 +21,18 @@ export const ContextProvider = ({ children }) => {
   const setMode = (e) => {
     setCurrentMode(e.target.value);
 
-    localStorage.setItem('themeMode', e.target.value)
+    localStorage.setItem("themeMode", e.target.value);
+
+    setThemeSettings(false);
   };
 
-  const setColor = (e) => {
-    setCurrentColor(e.target.value);
+  const setColor = (color) => {
+    
+    setCurrentColor(color);
 
-    localStorage.setItem('colorMode', e.target.value)
+    localStorage.setItem("colorMode", color);
+
+    setThemeSettings(false);
   };
 
   const handleClick = (clicked) => {
@@ -45,10 +51,14 @@ export const ContextProvider = ({ children }) => {
         setScreenSize,
         currentColor,
         setCurrentColor,
+
         currentMode,
         setCurrentMode,
-        themeSettings, 
+
+        themeSettings,
         setThemeSettings,
+        setColor,
+        setMode,
       }}
     >
       {children}

@@ -8,9 +8,8 @@ import { themeColors } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSetting = () => {
-
-
-  const { setMode, setColor, curretMode, currentColor, setThemeSettings } = useStateContext();
+  const { setMode, setColor, currentMode, currentColor, setThemeSettings } =
+    useStateContext();
 
   return (
     <div className="bg-half-transparent w-screen fixed right-0 top-0 nav-item">
@@ -35,8 +34,8 @@ const ThemeSetting = () => {
               name="theme"
               value="Light"
               className="cursor-pointer"
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === "Light"}
             />
             <lable htmlFor="light" className="ml-2 text-md cursor-pointer">
               Light
@@ -49,8 +48,8 @@ const ThemeSetting = () => {
               name="theme"
               value="Dark"
               className="cursor-pointer"
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === "Dark"}
             />
             <lable htmlFor="dark" className="ml-2 text-md cursor-pointer">
               Dark
@@ -70,12 +69,12 @@ const ThemeSetting = () => {
                   <button
                     type="button"
                     className="w-10 h-10 rounded-full cursor-pointer"
-                    style={{ backgroundColor: item.color}}
-                    onClick={() => {}}
+                    style={{ backgroundColor: item.color }}
+                    onClick={() => setColor(item.color)}
                   >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                        false ? "block" : "hidden"
+                        item.color === currentColor ? "block" : "hidden"
                       }`}
                     />
                   </button>
