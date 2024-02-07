@@ -8,6 +8,10 @@ import { themeColors } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const ThemeSetting = () => {
+
+
+  const { setMode, setColor, curretMode, currentColor, setThemeSettings } = useStateContext();
+
   return (
     <div className="bg-half-transparent w-screen fixed right-0 top-0 nav-item">
       <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-400 md:rounded-3xl">
@@ -15,7 +19,7 @@ const ThemeSetting = () => {
           <p className="font-semibold text-lg">Settings</p>
           <button
             type="button"
-            onClick={() => {}}
+            onClick={() => setThemeSettings(false)}
             style={{ color: "rgb(153, 171, 180)", borderRadius: "50%" }}
             className="text-2xl p-3 hover:drop-shadow-xl hover:bg-light-gray"
           >
@@ -71,7 +75,7 @@ const ThemeSetting = () => {
                   >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                        true ? "block" : "hidden"
+                        false ? "block" : "hidden"
                       }`}
                     />
                   </button>
